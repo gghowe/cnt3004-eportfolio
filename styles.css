@@ -31,6 +31,7 @@ a {
 .site-header {
     background: var(--nav);
     color: var(--nav-text);
+    border-bottom: 1px solid #000;
 }
 
 .header-inner {
@@ -101,13 +102,38 @@ main {
     object-position: center top;
 }
 
-.about-copy h1,
-h2 {
+h1 {
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.project p {
+    margin-bottom: 1rem;
+    font-size: 1.02rem;
+    max-width: 42rem;
+}
+
+.project-photo {
+    margin: 1.25rem 0 1.5rem;
+    border: 1px solid #000;
+    max-width: 720px;
+}
+
+.project-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .about-copy p {
