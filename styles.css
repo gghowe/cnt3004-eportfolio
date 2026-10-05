@@ -31,7 +31,7 @@ a {
 .site-header {
     background: var(--nav);
     color: var(--nav-text);
-    border-bottom: 8px solid #000;
+    border-bottom: 5px solid #000;
 }
 
 .header-inner {
