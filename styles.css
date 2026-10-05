@@ -31,7 +31,7 @@ a {
 .site-header {
     background: var(--nav);
     color: var(--nav-text);
-    border-bottom: 1px solid #000;
+    border: 4px solid #000;
 }
 
 .header-inner {
@@ -127,7 +127,7 @@ h2 {
 .project-photo {
     margin: 1.25rem 0 1.5rem;
     border: 1px solid #000;
-    max-width: 720px;
+    max-width: 460px;
 }
 
 .project-photo img {
