@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNT 3004 | Garrett Howe</title>
+    <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <span class="name">Garrett Howe</span>
+                <span class="brand-rule"></span>
+                <span class="brand-label">ePortfolio</span>
+            </a>
+            <nav aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a class="active" href="cnt3004.html">CNT 3004</a>
+                <a href="resume.html">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="course" aria-labelledby="course-heading">
+            <h1 id="course-heading">CNT 3004</h1>
+            <p>Computer Network Concepts, Fall 2026. These are short reflections on the homework, the quizzes, and the discussions.</p>
+
+            <h2>Assignment 1: Networking Fundamentals</h2>
+            <p>This assignment walked through the basics and then asked me to document a real network. I covered the OSI and TCP/IP models, MAC and IP addresses, topologies, and when a network needs a switch instead of a router. I also traced cabling, drew my own network, followed a web request, and tried ping, traceroute, and a short Wireshark capture.</p>
+            <p>Encapsulation took the longest to feel solid. I could list the layers, but I kept losing track of the header each layer adds. Diagramming my own setup fixed more of that than rereading the definitions. I could see the firewall, the switch, and the end devices and say where a frame stopped and a packet moved on.</p>
+
+            <h2>Assignment 2: Addressing and Protocol Traces</h2>
+            <p>The written questions were addresses and ports, and the lab was the captures. I worked through MAC address parts, IPv4 and IPv6, classful ranges, and which applications use TCP or UDP. The lab side was ipconfig, arp, and the routing table, plus Wireshark traces for HTTP, TCP, UDP, and DNS.</p>
+            <p>The TCP trace was the hard part. One handshake has sequence numbers, acknowledgements, and a round-trip time, and it is easy to grab the wrong packets. Filtering down to a single conversation made the source, destination, and port numbers readable. After that, DNS and UDP were mostly the same idea with different fields.</p>
+
+            <h2>Assignment 3: Cabling, Wireless, and Traffic Analysis</h2>
+            <p>Cabling was its own set of questions, and wireless was the other half. I compared coax, twisted pair, and fiber, including single-mode and multimode, and I had to separate bandwidth from throughput, noise, crosstalk, and attenuation. The wireless questions covered spectrum, SSIDs, and 802.11 frame types. The labs were a bandwidth capture and a Wi-Fi frame capture.</p>
+            <p>The packet list was the challenge. Most of what Wireshark shows is not the number the question wants. Filters and frame types got me to the useful lines, and the bandwidth lab made the written questions concrete. A link's rated speed and the throughput you actually measure are different numbers.</p>
+
+            <h2>Assignment 4: Virtualization, Subnets, and VLANs</h2>
+            <p>Virtual machines and subnetting were the two big pieces. I used VirtualBox and compared bridged, NAT, and host-only networking, then calculated subnets and wrote about VLANs. There was another HTTP capture on top of that.</p>
+            <p>The subnet math was where I slowed down. One wrong count of host bits shifts the ranges. VLANs clicked once I treated them as separate from the subnet. The VLAN is how the switch separates traffic. The subnet is the address plan on top of that. Seeing the virtual machine land on my LAN in bridged mode, and stay off it in NAT, made those modes less of a vocabulary list.</p>
+
+            <h2>Assignment 5 and 6: Security and Performance</h2>
+            <p>Homework 5 and 6 were one assignment on security and performance. I defined threats, policies, firewalls, and switch hardening, and I looked at WAN technologies, MPLS, and what spanning tree does when extra links create a loop. I also had to tell Security+, CISSP, CEH, and CISM apart, and work through performance ideas such as delay, loss, and recovery.</p>
+            <p>The certifications were easy to mix up because the names do not say who they are for. Spanning tree was the idea that took longer. Adding a second link feels like it should add capacity, and it can also create a loop that knocks the LAN offline until one path is blocked. That was the useful takeaway. Redundancy has to be planned, or it becomes the outage.</p>
+
+            <h2>Quizzes</h2>
+            <p>The quizzes tracked the lectures more than the labs. Early quizzes were devices, layers, and how a structured cabling system is documented. Later ones followed the homework into addressing, wireless, virtualization, subnets, and security. They helped when the choices were neighboring terms. A router versus a switch, bandwidth versus throughput, a VoIP gateway versus a PBX. I had to match the term to the job it does.</p>
+
+            <h2>Discussions</h2>
+            <p>The discussions were short responses to articles. I wrote about remote access for people working from home, cloud traffic and zero-trust, fiber under 5G, Wi-Fi 7 and multi-link operation, NAT and slow IPv6 adoption, blockchain nodes staying in sync, IoT devices missing from inventory, and edge cameras that should process video locally. The point I kept seeing was that the new tool still rides the network I was learning in the labs. Faster wireless still leaves the access point on a cable. An IoT camera still needs a VLAN if it cannot be patched. The articles were useful when they named that handoff.</p>
+
+            <h2>Overall Reflection</h2>
+            <p>At the start of the semester I could build and support systems, and I had a home lab, but I didn't know much past the box names.</p>
+            <p>The two things I got better at were reading a capture and doing the subnet math on paper before trusting a guess. Both showed up in more than one assignment. For the work I want, this is the missing piece. I already write automations and handle support. I want to be the person who can explain and fix the network those users and tools depend on.</p>
+
+            <h2>AI Use</h2>
+            <p>I used generative AI to review my resume and help me decide what belonged on it.</p>
+        </section>
+    </main>
+</body>
+</html>

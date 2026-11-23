@@ -31,7 +31,7 @@ a {
 .site-header {
     background: var(--nav);
     color: var(--nav-text);
-    border-bottom: 5px solid #000;
+    border-bottom: 2px solid #000;
 }
 
 .header-inner {
@@ -42,16 +42,40 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
 }
 
 .name {
     font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: 0.01em;
+    line-height: 1.2;
+}
+
+.brand-rule {
+    height: 1px;
+    background: var(--nav-muted);
+}
+
+.brand-label {
+    color: var(--nav-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.25rem;
 }
 
@@ -69,15 +93,6 @@ main {
     max-width: 1080px;
     margin: 0 auto;
     padding: 2.25rem 1.5rem 4rem;
-}
-
-.page-label {
-    color: var(--muted);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
 }
 
 .about {
@@ -118,8 +133,7 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
-.project,
-.project-label {
+.project {
     text-align: center;
 }
 
@@ -150,7 +164,60 @@ h2 {
     margin-bottom: 0;
 }
 
+.course p,
+.sheet p,
+.sheet li {
+    font-size: 1.02rem;
+}
+
+.course p,
+.sheet p {
+    max-width: 42rem;
+    margin-bottom: 1rem;
+}
+
+.course h2,
+.sheet h2 {
+    margin-top: 2.25rem;
+}
+
+.course h2:first-of-type,
+.sheet h2:first-of-type {
+    margin-top: 0;
+}
+
+.contact {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+}
+
+.sheet ul {
+    max-width: 42rem;
+    margin: 0 0 1rem 1.2rem;
+}
+
+.sheet li {
+    margin-bottom: 0.35rem;
+}
+
+.sheet a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
 @media (max-width: 760px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
     .about {
         grid-template-columns: 1fr;
         gap: 1.5rem;
